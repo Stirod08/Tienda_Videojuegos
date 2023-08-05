@@ -1,0 +1,327 @@
+:root {
+
+    /* --- Colores ---- */
+    --blanco: #fff;
+    --negro: #000;
+    --grisOscuro: #131316;
+    --verdeClaro: #00ff3b;
+    --verdeOscuro: #077524;
+    --azulClaro: #00BFFF;
+    --azulOscuro: #0000ff;
+
+    /* --- Fuentes --- */
+    --fuenteTitulos: 'Lato', sans-serif;
+    --fuenteText: 'Open Sans', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* --- Globales --- */
+body {
+    background-color: var(--grisOscuro);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: var(--fuenteText);
+    color: var(--blanco);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+main h1 {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--verdeClaro);
+    text-shadow: 0 0 5px var(--verdeOscuro), 0 0 10px var(--verdeOscuro), 0 0 15px var(--verdeOscuro);
+}
+
+
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--fuenteTitulos);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --- Header ---*/
+.bg-header {
+    background-image: url(../img/pattern_header.png);
+}
+
+.header {
+    display: grid;
+    place-items: center;
+    padding: 3rem;
+    text-transform: uppercase;
+}
+
+.header__logo {
+    width: 15rem;
+    filter: drop-shadow(0px 3px 10px var(--azulClaro));
+}
+
+.header h2 {
+    margin: 0;
+    color: var(--verdeClaro);
+    text-shadow: 0 0 5px var(--verdeOscuro), 0 0 10px var(--verdeOscuro), 0 0 15px var(--verdeOscuro);
+}
+
+.titulo__completo {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .titulo__partido {
+        display: none;
+    }
+
+    .titulo__completo {
+        display: inline;
+    }
+}
+
+span {
+    color: var(--azulClaro);
+    text-shadow: 0 0 5px var(--azulOscuro), 0 0 10px var(--azulOscuro), 0 0 15px var(--azulOscuro);
+}
+
+/* --- Navegación --- */
+.navegacion {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    gap: 2rem;
+    font-family: var(--fuenteTitulos);
+    font-size: 2.5rem;
+    background: linear-gradient(to right, var(--azulOscuro), #00BFFF, var(--azulOscuro)) top / 100% 2px no-repeat,
+        linear-gradient(to right, var(--azulOscuro), var(--azulClaro), var(--azulOscuro)) bottom / 100% 3px no-repeat;    
+}
+
+.navegacion__enlace {
+    color: var(--blanco);
+}
+
+.navegacion__enlace:hover {
+    color: var(--verdeClaro);
+    text-shadow: 0 0 5px var(--verdeOscuro), 0 0 10px var(--verdeOscuro), 0 0 15px var(--verdeOscuro);
+}
+
+.navegacion__enlace--activo {
+    color: #00BFFF;
+    text-shadow: 0 0 5px #0000FF, 0 0 10px #0000FF, 0 0 15px #0000FF;
+}
+
+/* --- Main --- */
+.bg-main {
+    background-image: url(../img/pattern.png);
+}
+
+/* --- Grid ---*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; 
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/*Juego*/
+.juego {
+    background: rgb(159, 159, 159);
+    background: radial-gradient(circle, rgba(159, 159, 159, 1) 0%, rgba(19, 19, 22, 1) 100%);
+    padding: 1rem;
+    max-width: 23rem;
+
+    box-shadow: 0px 10px 20px -10px rgba(0,255,59,1);
+}
+
+.juego__img {
+    width: 100%;
+    height: 30rem;
+}
+
+.juego__nombre {
+    font-family: var(--fuenteTitulos);
+}
+
+.juego__precio {
+    font-family: var(--fuenteText);
+    margin-top: 2rem;
+    text-align: center;
+    color: #00BFFF;
+    text-shadow: 0 0 5px #0000FF, 0 0 10px #0000FF, 0 0 15px #0000FF;
+}
+
+/* --- Descuentos ---*/
+.juego--descuento{
+    box-shadow: 0px 10px 20px -10px rgb(243, 25, 0);
+}
+.juego__precio{
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+}
+
+.juego__precio--descuento {
+    text-decoration: line-through;  
+    font-size: 1rem; 
+}
+
+.juego__precio--actual{
+    color: var(--verdeClaro);
+    text-shadow: 0 0 5px var(--verdeOscuro), 0 0 10px var(--verdeOscuro), 0 0 15px var(--verdeOscuro);
+}
+
+.descuento {
+    background-color: #FF0000;
+    color: #FFFFFF;
+    padding: 3px 5px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+    text-decoration: none;
+    margin-right: 10px; 
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+}
+
+
+/*Banners*/
+.grafico {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    grid-column: 1 / 3;
+}
+
+.grafico--banner1 {
+    grid-row: 2 / 3;
+    background-image: url(../img/juegos/banner1.jpg);
+}
+
+.grafico--banner2 {    
+    grid-column: 1 / 3;
+    grid-row: 9 / 10;
+    background-image: url(../img/juegos/banner2.jpg);
+    max-width: 56rem;
+}
+
+
+.grafico--banner3 {
+    grid-row: 14 / 15;
+    background-image: url(../img/juegos/banner3.jpg);
+}
+
+@media (min-width: 768px) {
+    .grafico--banner2 {
+        grid-column: 2 / 4;
+        grid-row: 5 / 6;
+    }
+}
+
+@media (min-width: 1200px) {
+    .grafico--banner2 {
+        grid-column: 3 / 5;
+    }
+}
+
+@media (min-width: 768px) {
+    .grafico--banner3 {
+        grid-row: 7 / 8;
+    }
+}
+
+
+
+
+/*Footer*/
+.footer {
+    background: linear-gradient(to right, var(--naranjaNeon), #ff0000, var(--naranjaNeon)) top / 100% 2px no-repeat;
+    background-color: #26262c;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+
+}
+
+.footer h3 {
+    color: #00BFFF;
+    /* Color azul neón */
+    text-shadow: 0 0 5px #0000FF, 0 0 10px #0000FF, 0 0 15px #0000FF;
+    font-family: var(--fuenteTitulos);
+}
+
+.footer h3,
+p {
+    margin: 0;
+}
+
+.footer p {
+    font-size: 1.5rem;
+}
+
+.footer__span {
+    color: var(--verdeClaro);
+    /* Color rojo */
+    text-shadow: 0 0 5px var(--verdeOscuro), 0 0 10px var(--verdeOscuro), 0 0 15px var(--verdeOscuro);
+}
+
+
+
+
+
+
+
+
+
+
+
+
