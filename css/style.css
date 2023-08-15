@@ -176,8 +176,7 @@ span {
     background: rgb(159, 159, 159);
     background: radial-gradient(circle, rgba(159, 159, 159, 1) 0%, rgba(19, 19, 22, 1) 100%);
     padding: 1rem;
-    max-width: 23rem;
-
+    max-width: auto;
     box-shadow: 0px 10px 20px -10px rgba(0,255,59,1);
 }
 
@@ -288,7 +287,7 @@ span {
     background-color: #26262c;
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
+    margin-top: 5rem;
 
 }
 
@@ -310,18 +309,7 @@ p {
 
 .footer__span {
     color: var(--verdeClaro);
-    /* Color rojo */
     text-shadow: 0 0 5px var(--verdeOscuro), 0 0 10px var(--verdeOscuro), 0 0 15px var(--verdeOscuro);
 }
-
-
-
-
-
-
-
-
-
-
 
 
