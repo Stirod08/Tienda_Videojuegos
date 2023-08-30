@@ -46,10 +46,11 @@ img {
     max-width: 100%;
 }
 
-main h1 {
+h1 {
     font-size: 4rem;
     text-align: center;
     text-transform: uppercase;
+    font-family: var(--fuenteTitulos);
     color: var(--verdeClaro);
     text-shadow: 0 0 5px var(--verdeOscuro), 0 0 10px var(--verdeOscuro), 0 0 15px var(--verdeOscuro);
 }
@@ -64,12 +65,14 @@ h3 {
     font-size: 2.4rem;
 }
 
-h1,
+
 h2,
 h3 {
     font-family: var(--fuenteTitulos);
-    color: var(--blanco);
     text-align: center;
+    text-transform: uppercase;
+    color: #00BFFF;
+    text-shadow: 0 0 5px #0000FF, 0 0 10px #0000FF, 0 0 15px #0000FF;
 }
 
 .contenedor {
@@ -130,7 +133,7 @@ span {
     font-family: var(--fuenteTitulos);
     font-size: 2.5rem;
     background: linear-gradient(to right, var(--azulOscuro), #00BFFF, var(--azulOscuro)) top / 100% 2px no-repeat,
-        linear-gradient(to right, var(--azulOscuro), var(--azulClaro), var(--azulOscuro)) bottom / 100% 3px no-repeat;    
+        linear-gradient(to right, var(--azulOscuro), var(--azulClaro), var(--azulOscuro)) bottom / 100% 3px no-repeat;
 }
 
 .navegacion__enlace {
@@ -156,7 +159,7 @@ span {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem; 
+    gap: 2rem;
 }
 
 @media (min-width: 768px) {
@@ -177,12 +180,30 @@ span {
     background: radial-gradient(circle, rgba(159, 159, 159, 1) 0%, rgba(19, 19, 22, 1) 100%);
     padding: 1rem;
     max-width: auto;
-    box-shadow: 0px 10px 20px -10px rgba(0,255,59,1);
+    box-shadow: 0px 10px 20px -10px rgba(0, 255, 59, 1);
+    overflow: hidden;
+}
+
+.juego img {
+    transition: transform 0.3s;
+}
+
+.juego:hover img {
+    transform: scale(1.05);
 }
 
 .juego__img {
     width: 100%;
-    height: 30rem;
+    height: 25rem;
+}
+
+
+
+@media (min-width: 768px) {
+    .juego__img {
+        width: 100%;
+        height: 30rem;
+    }
 }
 
 .juego__nombre {
@@ -198,21 +219,22 @@ span {
 }
 
 /* --- Descuentos ---*/
-.juego--descuento{
+.juego--descuento {
     box-shadow: 0px 10px 20px -10px rgb(243, 25, 0);
 }
-.juego__precio{
+
+.juego__precio {
     display: flex;
     justify-content: center;
-    align-items: center;      
+    align-items: center;
 }
 
 .juego__precio--descuento {
-    text-decoration: line-through;  
-    font-size: 1rem; 
+    text-decoration: line-through;
+    font-size: 1rem;
 }
 
-.juego__precio--actual{
+.juego__precio--actual {
     color: var(--verdeClaro);
     text-shadow: 0 0 5px var(--verdeOscuro), 0 0 10px var(--verdeOscuro), 0 0 15px var(--verdeOscuro);
 }
@@ -225,12 +247,14 @@ span {
     position: relative;
     z-index: 2;
     text-decoration: none;
-    margin-right: 10px; 
+    margin-right: 10px;
     height: 4rem;
     display: flex;
     justify-content: center;
-    align-items: center;     
+    align-items: center;
 }
+
+/* --- Fin Main  --- */
 
 
 /*Banners*/
@@ -246,11 +270,9 @@ span {
     background-image: url(../img/juegos/banner1.jpg);
 }
 
-.grafico--banner2 {    
-    grid-column: 1 / 3;
-    grid-row: 9 / 10;
+.grafico--banner2 {
+    grid-row: 5 / 6;
     background-image: url(../img/juegos/banner2.jpg);
-    max-width: 56rem;
 }
 
 
@@ -262,7 +284,6 @@ span {
 @media (min-width: 768px) {
     .grafico--banner2 {
         grid-column: 2 / 4;
-        grid-row: 5 / 6;
     }
 }
 
@@ -278,7 +299,60 @@ span {
     }
 }
 
+/* --- Fin Banners  --- */
 
+
+/* --- Nosotros --- */
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .nosotros__img {
+        grid-column: 2 / 3;
+        min-width: 45rem;
+    }
+}
+
+.nosotros__img {
+    grid-row: 1 / 2;
+    width: 100%;
+}
+
+/* --- Bloques  --- */
+.bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .bloques {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque{
+    text-align: center;
+}
+
+.bloque__img {
+    width: 100%;
+}
+
+.bloque__titulo {
+    margin: 0;
+}
+
+/* --- Fin Nosotros  --- */
 
 
 /*Footer*/
@@ -311,5 +385,3 @@ p {
     color: var(--verdeClaro);
     text-shadow: 0 0 5px var(--verdeOscuro), 0 0 10px var(--verdeOscuro), 0 0 15px var(--verdeOscuro);
 }
-
-

@@ -10,12 +10,15 @@
     
 </head>
 <body>
-    <header class="header">
-        <a href="index.html">
-            <img class="header__logo" src="img/LogoStirodblanco.svg" alt="Logo">
-        </a>
-        <h1><span>{ </span>Stirod<span> - </span>Game Shop<span> }</span></h1>
-    </header>
+    <div class="bg-header">
+        <header class="header">
+            <a href="index.html">
+                <img class="header__logo" src="img/LogoStirodblanco.svg" alt="Logo">
+            </a>
+            <h2 class="titulo__completo"><span>{ </span>Stirod<span> - </span>Game Shop<span> }</span></h2>
+            <h2 class="titulo__partido"><span>{ </span>Stirod<span> }</span><br>Game Shop</h2>
+        </header>
+    </div>
 
     <nav class="navegacion">
         <a class="navegacion__enlace" href="index.html">Tienda</a>
@@ -23,26 +26,51 @@
     </nav>
 
     <main class="contenedor">
-        <h2>Nosotros</h2>
+        <h1>Nosotros</h1>
 
-        <div class="juego juego--descuento">
-            <a href="juego.html">
-                <img src="img/juegos/4.jpg" alt="Imagen de Videojuego" class="juego__img">
+        <div class="nosotros">
+            <div class="nosotros__contenido">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident voluptatibus ducimus, dolores autem natus reiciendis magni nisi beatae amet aperiam vero accusantium enim. Velit dolores dignissimos accusantium, odio neque eos!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident voluptatibus ducimus, dolores autem natus reiciendis magni nisi beatae amet aperiam vero accusantium enim. Velit dolores dignissimos accusantium, odio neque eos!</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolor ex qui debitis impedit consequatur ducimus tenetur, atque beatae error totam, dignissimos incidunt ad deleniti? Ea numquam veniam consequuntur eaque.</p>
+            </div>
 
-                <div class="juego__info">
-                    <p class="juego__nombre">Grand Theft Auto V</p>
-                    <div class="juego__precio">                        
-                        <span class="descuento">-50%</span>
-                        <div class="precio__valor">
-                            <p class="juego__precio--descuento">$150.000</p>
-                            <p class="juego__precio--actual">$75.000</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div><!-- div juego -->
+            <div class="nosotros__img">
+                <img src="img/nosotros.jpg" alt="">
+            </div>
+        </div>
         
     </main>
+
+    <section class="contenedor comprar">
+        <h2 class="comprar__titulo">¿Porqué Stirod Game Shop?</h2>
+
+        <div class="bloques">
+            <div class="bloque">
+                <img class="bloque__img" src="img/icono_1.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Mejor Precio</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolor ex qui debitis impedit consequatur ducimus tenetur</p>
+            </div><!-- fin Bloque -->
+
+            <div class="bloque">
+                <img class="bloque__img" src="img/icono_2.svg" alt="porque comprar">
+                <h3 class="bloque__titulo">Para Gamers</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolor ex qui debitis impedit consequatur ducimus tenetur</p>
+            </div><!-- fin Bloque -->
+
+            <div class="bloque">
+                <img class="bloque__img" src="img/icono_3.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Envío Gratis</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolor ex qui debitis impedit consequatur ducimus tenetur</p>
+            </div><!-- fin Bloque -->
+
+            <div class="bloque">
+                <img class="bloque__img" src="img/icono_4.png" alt="porque comprar">
+                <h3 class="bloque__titulo">Calidad</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolor ex qui debitis impedit consequatur ducimus tenetur</p>
+            </div><!-- fin Bloque -->
+            
+        </div>
+    </section>
 
     <footer class="footer">
         <h3 class="footer__titulo">Stirod Gamer Shop</h3>
